@@ -1,5 +1,5 @@
 {
-  "name": "epic-web-test",
+  "name": "web-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -102,7 +102,7 @@
   },
   "devDependencies": {
     "concurrently": "^3.5.0",
-    "dompurify": "^1.0.2",
+    "dompurify": "^1.0.3",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6"
   }

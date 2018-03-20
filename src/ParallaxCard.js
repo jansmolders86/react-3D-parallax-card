@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import './ParallaxCard.sass';
 
-class ParallaxCard extends Component {
+export default class ParallaxCard extends React.Component {
   static propTypes = {
         layers: PropTypes.arrayOf(PropTypes.string).isRequired
     };
@@ -51,9 +52,9 @@ class ParallaxCard extends Component {
                 rootElemHeight * 0.4}) 0%, rgba(255, 255, 255, 0) 80%)`,
                 transform: `translateX(${offsetX * layerCount - 0.1}px) translateY(${offsetY * layerCount - 0.1}px)`
             },
-            layers: {
-                transform: `translateX(${offsetX * (layerCount) * (2.5 / wMultiple)}px) translateY(${offsetY * layerCount * (2.5 / wMultiple)}px)`
-            }
+            layers: this.props.layers.map((_, idx) => ({
+                transform: `translateX(${(offsetX * (layerCount - idx)) * ((idx * 2.5) / wMultiple)}px) translateY(${offsetY * layerCount * ((idx * 2.5) / wMultiple)}px)`,
+            }))
         });
     };
 
@@ -105,6 +106,7 @@ class ParallaxCard extends Component {
                 onTouchMove={this.handleTouchMove}
                 onTouchStart={this.handleEnter}
                 onTouchEnd={this.handleLeave}
+                className="parallax-card"
                 ref={(node) => { this.node = node;}} >
                 <div className="parallax-card-container" style={{...this.state.container}}>
                     <div className="parallax-card-shadow" />
@@ -115,5 +117,3 @@ class ParallaxCard extends Component {
         );
     }
 }
-
-export default App;
