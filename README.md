@@ -1,6 +1,6 @@
 # Apple TV-esk 3D Parallax Card
 
-Based of if the awesome work by [Keyanzhang's atvImg](https://github.com/keyanzhang/react-atv-img) which in turn is based on [Drew Wilson's atvImg](https://github.com/drewwilson/atvImg)
+Based off of the awesome work by [Keyanzhang's atvImg](https://github.com/keyanzhang/react-atv-img) which in turn is based on [Drew Wilson's atvImg](https://github.com/drewwilson/atvImg)
 
 ## Example: 
 ![GIF](https://github.com/jansmolders86/react-3D-parallax-card/blob/master/public/images/preview.gif?raw=true)
